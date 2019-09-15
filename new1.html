@@ -1,0 +1,62 @@
+ <html>
+
+<head>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     
+    </head>
+<body><div>
+    <form>    
+        <h1><b>Please select the city for Weather Forecast</b></h1>
+    <select id="mydoc">
+        <option >--Select City--</option>
+        <option value="delhi">delhi</option>
+        
+        <option value="mumbai">mumbai</option>
+        <option value="chennai">chennai</option>
+        <option value="Bangalore">Bangalore</option>
+    </select>
+    </form>
+    </div>
+    <h3><b><div id="display" style="display:block; text-align: center"></div></b></h3>
+   <script>
+    var temp;
+    $(document).ready(function(){
+        
+        $.get("C:\\Users\\jatin\\Desktop\\new cst\\Weather App\\weather.json",function(data,status){temp=data;
+    console.log(data);
+        });
+     $("#mydoc").change(function(){
+         var r=document.getElementById("mydoc").value;
+    console.log(r);
+         
+         
+         document.getElementById("display").innerHTML="";
+         for(var i=0;i<temp.length;i++)
+             { 
+                 if(temp[i].City==r)
+                     {
+                         for(x in temp[i])
+                             {
+                         document.getElementById("display").innerHTML+=x+" : "+temp[i][x]+"<br>";
+                                 console.log(x+" : "+temp[i][x]);
+                             }
+                        
+                         
+                     }
+                 
+                 
+             }
+         
+         
+     });
+                                 
+                                 
+                                 
+    });
+    </script>
+        
+
+    </body>
+
+</html>

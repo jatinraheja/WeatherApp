@@ -1,0 +1,32 @@
+[
+    {
+        "City":"Chandigarh",
+        "temperature":"33",
+        "precipitation":"2%",
+        "humidity":"70%",
+        "wind":"15 kmph"
+    },
+    {
+        "City":"Delhi",
+        "temperature":"35",
+        "precipitation":"72%",
+        "humidity":"50%",
+        "wind":"10 kmph"
+    },
+    {
+        "City":"Hyderabad",
+        "temperature":"30",
+        "precipitation":"50%",
+        "humidity":"60%",
+        "wind":"12 kmph"
+    },
+      {
+        "City":"Bangalore",
+        "temperature":"25",
+        "precipitation":"78%",
+        "humidity":"70%",
+        "wind":"20 kmph"
+    }
+    
+    
+]

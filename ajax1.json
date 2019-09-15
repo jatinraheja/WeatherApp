@@ -1,0 +1,32 @@
+[
+    {
+        "City":"delhi",
+        "Temperature":"40C",
+        "Humidity":"70%",
+        "Precepitation":"30%",
+        "Wind":"30kmph"
+    },
+    
+    {
+        "City":"mumbai",
+        "Temperature":"22C",
+        "Humidity":"10%",
+        "Precepitation":"80%",
+        "Wind":"9kmph"
+    },
+    {
+        "City":"chennai",
+        "Temperature":"30C",
+        "Humidity":"90%",
+        "Precepitation":"0%",
+        "Wind":"8kmph"
+    },
+    {
+        "City":"Bangalore",
+        "Temperature":"32C",
+        "Humidity":"70%",
+        "Precepitation":"2%",
+        "Wind":"5kmph"
+    }
+    
+]

@@ -1,0 +1,68 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+<div class="mt-5 ml-5">
+<select style="font-size:20px" onchange="getdata(this.value)">
+   <option selected>SelectCity</option>
+    <option>Chandigarh</option>
+    <option>Delhi</option>
+    <option>Hyderabad</option>
+    <option>Bangalore</option>
+</select>    
+    <div class="mt-4"><p id="p1"></p></div>
+    <div><p id="p2"></p></div>
+    <div><p id="p3"></p></div>
+    <div><p id="p4"></p></div>
+    <div><p id="p5"></p></div>
+</div>    
+    <script>
+          var obj;
+        $(document).ready(function(){
+    $.get("weather.json",function(data,status){
+        obj=data;
+       // alert(obj[0].City);
+        
+       //alert("data: "+data);
+    });
+    
+});
+   function getdata(evt) 
+    {
+    
+        
+        
+        for(var i=0;i<4;i++)
+        {
+            if(obj[i].City==evt)
+            {
+                $("#p1").text("City : "+obj[i].City);
+                $("#p2").text("Temperature : "+obj[i].temperature);
+                $("#p3").text("Precipitation : "+obj[i].precipitation);
+                $("#p4").text("Humidity : "+obj[i].humidity);
+                $("#p5").text("Wind : "+obj[i].wind);
+                break;
+            }
+                
+        }
+    
+    }
+    
+      
+    </script>
+    
+</body>
+</html>    
